@@ -1,0 +1,21 @@
+{
+    "name": "mbarquin/import-export-legacy",
+    "description": "Helper to read csv and fixed-line files into named and validated arrays, or to export arrays into csv or fixed-line files. It uses iconv to change data codification.",
+    "keywords": ["CSV","Fixed-line","File", "PHP"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Moises Barquin",
+            "email": "moises.barquin@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "config": {
+        "vendor-dir": "src/vendor"
+    },
+    "autoload": {
+    "psr-4": { "mbarquin\\LegacyFile\\": "src/LegacyFile" }
+    }
+}
