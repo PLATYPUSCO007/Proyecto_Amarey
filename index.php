@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include_once './index2.php';
+include_once './body.php';
 
 ?>
 
