@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+>>>>>>> 8430097c36beef5266f368de033435e131a45fdd
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -6,12 +12,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+<<<<<<< HEAD
 		<title>HTML Education Template</title>
                 
+=======
+		<title>PROYECTO AMAREY</title>
+
+>>>>>>> 8430097c36beef5266f368de033435e131a45fdd
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
 		<!-- Bootstrap -->
+<<<<<<< HEAD
                 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
 
 		<!-- Font Awesome Icon -->
@@ -23,6 +35,15 @@
 		<!-- Custom stlylesheet -->
                 <link type="text/css" rel="stylesheet" href="css/style.css"/>
                 
+=======
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+>>>>>>> 8430097c36beef5266f368de033435e131a45fdd
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,4 +52,60 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+<<<<<<< HEAD
     </head>
+=======
+    </head>
+<body>
+		<!-- Header -->
+		<header id="header" class="transparent-nav">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="index.html">
+							<img src="./img/logo-alt.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+
+				<!-- Navigation -->
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="#">Inducción</a></li>
+						<li><a href="#">Ayuda</a></li>
+						<li><a href="blog.html">Colaborar</a></li>
+						<li><a href="contact.html">Contácto</a></li>
+					</ul>
+				</nav>
+				<!-- /Navigation -->
+
+			</div>
+		</header>
+		<!-- /Header -->
+                
+                <!-- Backgound Image -->
+		<div class="bg-image bg-parallax overlay" style="background-image:url(./img/home-background.jpg)"></div>
+		<!-- /Backgound Image -->
+                
+                <!-- preloader -->
+		<!--div id='preloader'><div class='preloader'></div></div-->
+		<!-- /preloader -->
+
+
+		<!-- jQuery Plugins -->
+                <script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
+>>>>>>> 8430097c36beef5266f368de033435e131a45fdd

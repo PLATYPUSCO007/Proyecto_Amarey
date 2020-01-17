@@ -29,7 +29,12 @@ class Welcome extends CI_Controller {
 
         public function index()
 	{
+<<<<<<< HEAD
             $this->load->view('body');  
+=======
+            $this->load->view('header');
+            $this->load->view('welcome_message');
+>>>>>>> 8430097c36beef5266f368de033435e131a45fdd
 	}
         
         function recibir_datos(){
