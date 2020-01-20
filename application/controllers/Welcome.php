@@ -24,24 +24,20 @@ class Welcome extends CI_Controller {
             $this->load->helper('form');
             $this->load->helper('link');
             $this->load->model('form_model');
+            $this->load->dbforge();
+            $this->load->dbutil();
         }
 
 
         public function index()
 	{
-<<<<<<< HEAD
-            $this->load->view('body');  
-=======
-            $this->load->view('header');
-            $this->load->view('welcome_message');
->>>>>>> 8430097c36beef5266f368de033435e131a45fdd
+            $this->load->view('session_form');  
 	}
         
         function recibir_datos(){
             $data = array(
                 'name' => $this->input->post('name'),
-                'pass' => $this->input->
-                    post('password')
+                'pass' => $this->input->post('password')
             );
             $this->form_model->crear_usuario($data);
             $this->load->view('welcome_message');

@@ -1,19 +1,38 @@
+<?php require_once 'header.php'; ?>
+<?php require_once 'body.php'; ?>
+<!-- Home -->
+<!--div id="home" class="hero-area"-->
+<div class="home-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="white-text">Inducciòn en SAP</h1>
+                <p class="lead white-text">Grupo Amarey Nova Medical</p>
 
+            </div>
+        </div>
+        <!--?php require 'session_form.php'; ?-->
+    </div>
+</div>
+<!--/div-->
+<!-- /Home -->
 <div id="form">
-<?= form_open('/Welcome/recibir_datos');?>
-<?php
+    <?= form_open('/Welcome/recibir_datos'); ?>
+    <?php
     $name = array('name' => 'name', 'placeholder' => 'Usuario');
     $password = array('name' => 'password', 'placeholder' => 'pass');
-?>
-        <?= form_label('Usuario :', 'name')?>
-        <?= form_input($name)?>
-        <?= form_label('Contraseña :', 'password')?>
-        <?= form_password($password)?>    
+    ?>
+    <?= form_label('Usuario :', 'name') ?>
+    <?= form_input($name) ?>
+    <?= form_label('Contraseña :', 'password') ?>
+    <?= form_password($password) ?>    
     <br>
     <br>
-        <?= form_submit('', 'Ingresar')?>
+    <?= form_submit('', 'Ingresar') ?>
     </form>
     <br>
-    <a href="<?=  get_registry() ?>" target="_blank">Crear una cuenta ahora!</a> 
+    <a href="<?= get_registry() ?>" target="_blank">Crear una cuenta ahora!</a> 
 </div>
 
+</body>
+</html>

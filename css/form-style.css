@@ -25,6 +25,10 @@ and open the template in the editor.
 }
 
 #form {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
     color: tomato;
     text-align: center;
     max-height: 500px;
@@ -38,6 +42,7 @@ and open the template in the editor.
 }
 
 #registry{
+    position: absolute;
     background-color: yellow;
     height: 50px;
     width: 50px;
