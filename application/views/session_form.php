@@ -1,12 +1,12 @@
-<?php require_once 'header.php'; ?>
-<?php require_once 'body.php'; ?>
+<?= $header ?>
+<?= $body ?>
 <!-- Home -->
 <!--div id="home" class="hero-area"-->
 <div class="home-wrapper">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h1 class="white-text">Inducciòn en SAP</h1>
+                <h1 class="white-text">Inducción en SAP</h1>
                 <p class="lead white-text">Grupo Amarey Nova Medical</p>
 
             </div>
