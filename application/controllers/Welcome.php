@@ -19,20 +19,18 @@ class Welcome extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
-            
+
     function __construct() {
         parent::__construct();
         $this->load->helper('form');
-        $this->load->helper('link');
         $this->load->model('form_model');
         $this->load->dbforge();
         $this->load->dbutil();
-        
     }
-    
+
     public function load_page_skeleton() {
-        $page['header'] = $this->load->view('header','',true);
-        $page['body'] = $this->load->view('body','',true);
+        $page['header'] = $this->load->view('header', '', true);
+        $page['body'] = $this->load->view('body', '', true);
         return $page;
     }
 
@@ -49,8 +47,36 @@ class Welcome extends CI_Controller {
         $this->load->view('welcome_message');
     }
 
+    function validate_user() {
+        $data = array(
+            'name_validate' => $this->input->post('name_validated'),
+            'pass_validate' => $this->input->post('password_validated'),
+            'login' => false
+        );
+        /** @var type $results */
+        if (empty($data['name_validate']) or empty($data['pass_validate'])) {
+            redirect(base_url());
+        } else {
+            $results['usuario'] = $this->form_model->validate($data);
+            if ($results['usuario'] != null) {
+                $data['login'] = true;
+                $this->session->set_userdata($data);
+                $this->load->view('welcome_message', $results);
+            } else {
+                header("Location: " . base_url() . "?fallo=true");
+                die();
+            }
+        }
+    }
+
+    function logout() {
+        $this->session->sess_destroy();
+    }
+
     function load_registry() {
         $this->load->view('registry_form', $this->load_page_skeleton());
     }
 
 }
+
+?>
