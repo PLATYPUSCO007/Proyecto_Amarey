@@ -24,6 +24,26 @@ and open the template in the editor.
     color: snow;
 }
 
+#registry a{
+    color: tomato;
+    font-size: 15px;
+}
+
+#registry a:link{
+    color: yellowgreen;
+}
+
+#registry a:active{
+    color: snow;
+}
+
+#enter a:hover{
+    color: azure;
+    font-size: 14px;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px -7px 5px 0px rgba(0,0,0,0.75);
+}
+
 #form {
     position: absolute;
     left: 0;
@@ -43,9 +63,11 @@ and open the template in the editor.
 
 #registry{
     position: absolute;
-    background-color: yellow;
-    height: 50px;
-    width: 50px;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 50%;
+    width: 50%;
     color: tomato;
     text-align: center;
     max-height: 500px;

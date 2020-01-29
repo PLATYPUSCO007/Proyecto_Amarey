@@ -27,6 +27,7 @@
     <?= form_label('Contraseña :', 'password') ?>
     <?= form_password($password) ?>    
     <br>
+    <br>
     <?= form_submit('', 'Registrarme') ?>
     </form>
 </div>
