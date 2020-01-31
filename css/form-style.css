@@ -80,3 +80,89 @@ and open the template in the editor.
     padding-bottom: 10px;
 }
 
+.container {
+    z-index: 10;
+    width: 1024px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.top-nav {
+    z-index: 10;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.top-nav ul{
+    z-index: 10;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-family: fantasy;
+}
+
+.top-nav .main a{
+    z-index: 10;
+    display: block;
+    color: darkgray;
+    text-decoration: none;
+}
+
+.top-nav .main li {
+    z-index: 10;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.top-nav .dropdown{
+    z-index: 10;
+    position: absolute;
+    background-color: black;
+    width: 200px;
+    left: 0;
+    display: none; 
+}
+
+.top-nav .dropdown li,
+.top-nav .dropdown ul li{
+    z-index: 10;
+    display: block;
+    width: 100%;
+}
+
+.top-nav .main > li > a {
+    z-index: 10;
+    padding: 20px;
+}
+
+.top-nav .dropdown ul{
+    z-index: 10;
+    left: 200px;
+    top: 0;
+}
+
+.top-nav .dropdown li{
+    z-index: 10;
+    text-align: center;
+}
+
+.top-nav .dropdown li a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.info {
+    text-align: center;
+    font-size: 1.7em;
+}
+
+.top-nav .main li:hover > a{
+    color: white;
+}
+
+.top-nav ul li:hover > .dropdown{
+    display: block;
+
+}
