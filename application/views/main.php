@@ -3,22 +3,18 @@
     <nav class="top-nav">
         <ul class="main">
             <?php
-            foreach ($maindata['main2'] as $main2) {
-                $prueba[] = $main2;
-            }
-            $j = 0;
             $structure_main = "";
 
             foreach ($maindata['main'] as $main) {
-                $structure_main .= '<li class="pi-has-dropdown"> <a href="">' .$main->titulo .'</a>';
+                $structure_main .= '<li class="pi-has-dropdown">' . '<a href="' . $main->url . '">' . $main->titulo . '</a>';
                 $structure_main .= '<ul class="dropdown">';
-                if ($main->id == $prueba[$j]->enlacef) {
-                    $structure_main .= '<li> <a href="">' . $prueba[$j]->titulo . '</li></a>';
+                foreach ($maindata['main2'] as $main2) {
+                    if ($main->id == $main2->enlacef) {
+                        $structure_main .= '<li> <a href="' . $main2->url . '">' . $main2->titulo . '</li></a>';
+                    }
                 }
                 $structure_main .= '</ul>';
                 $structure_main .= '</li>';
-
-                $j++;
             }
             ?>
 
