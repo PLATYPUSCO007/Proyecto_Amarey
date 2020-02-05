@@ -9,22 +9,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Main_controller extends CI_Controller {
 
-    function __construct() {
-        parent::__construct();
-        $this->load->model('main_model');
-    }
 
-    function print_main() {
-        $mainp = $this->main_model->get_mainp();
-        $mainsec = $this->main_model->get_mainsec();
+
+    static function print_main(CI_Controller $var) {
+        $var->load->model('main_model');
+        $mainp = $var->main_model->get_mainp();
+        $mainsec = $var->main_model->get_mainsec();
 
         $data['maindata'] = array(
             'main' => $mainp,
             'main2' => $mainsec
         );
-        
-        $this->load->view('header');
-        $this->load->view('main', $data);
+        $page['result'] = $var->load->view('main', $data);
     }
 
 }

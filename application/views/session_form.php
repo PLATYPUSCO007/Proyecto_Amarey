@@ -15,6 +15,7 @@
 <!--/div-->
 <!-- /Home -->
 <div id="registry">
+    <?php $this->session->sess_destroy();?>
     <?php if (isset($_GET["fallo"]) && $_GET["fallo"] == 'true') { ?>
         <script> window.alert("Usuario no encontrado");</script>
     <?php } ?>
