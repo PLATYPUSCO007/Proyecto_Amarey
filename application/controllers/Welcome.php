@@ -61,7 +61,9 @@ class Welcome extends CI_Controller {
             if ($results['usuario'] != null) {
                 $data['login'] = true;
                 $this->session->set_userdata($data);
-                $this->load->view('welcome_message', $results);
+                $results['skeletones'] = $this->load_page_skeleton(); 
+                $this->load->view('user_form', $results);
+                $this->session->sess_destroy();
             } else {
                 header("Location: " . base_url() . "?fallo=true");
                 die();
@@ -69,9 +71,6 @@ class Welcome extends CI_Controller {
         }
     }
 
-    function logout() {
-        $this->session->sess_destroy();
-    }
 
     function load_registry() {
         $this->load->view('registry_form', $this->load_page_skeleton());

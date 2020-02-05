@@ -14,16 +14,16 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
 		<!-- Bootstrap -->
-                <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+                <link type="text/css" rel="stylesheet" href="<?= base_url()?>css/bootstrap.min.css"/>
 
 		<!-- Font Awesome Icon -->
-                <link rel="stylesheet" href="css/font-awesome.min.css">
+                <link rel="stylesheet" href="<?= base_url()?>css/font-awesome.min.css">
                 
                 <!-- Custom stlylesheet-->
-                <link type="text/css" rel="stylesheet" href="css/form-style.css"/>
+                <link type="text/css" rel="stylesheet" href="<?= base_url()?>css/form-style.css"/>
 
 		<!-- Custom stlylesheet -->
-                <link type="text/css" rel="stylesheet" href="css/style.css"/>
+                <link type="text/css" rel="stylesheet" href="<?= base_url()?>css/style.css"/>
                 
                 <script src="<?= base_url()?>js/notification" lang="Javascript"></script>
 
