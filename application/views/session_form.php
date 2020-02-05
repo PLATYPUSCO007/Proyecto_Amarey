@@ -1,38 +1,41 @@
-<?php require_once 'header.php'; ?>
-<?php require_once 'body.php'; ?>
+<?= $header ?>
+<?= $body ?>
 <!-- Home -->
 <!--div id="home" class="hero-area"-->
 <div class="home-wrapper">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h1 class="white-text">Inducciòn en SAP</h1>
+                <h1 class="white-text">Inducción en SAP</h1>
                 <p class="lead white-text">Grupo Amarey Nova Medical</p>
-
             </div>
         </div>
-        <!--?php require 'session_form.php'; ?-->
     </div>
 </div>
 <!--/div-->
 <!-- /Home -->
-<div id="form">
-    <?= form_open('/Welcome/recibir_datos'); ?>
+<div id="registry">
+    <?php $this->session->sess_destroy();?>
+    <?php if (isset($_GET["fallo"]) && $_GET["fallo"] == 'true') { ?>
+        <script> window.alert("Usuario no encontrado");</script>
+    <?php } ?>
+    <?= form_open('/Welcome/validate_user'); ?>
     <?php
-    $name = array('name' => 'name', 'placeholder' => 'Usuario');
-    $password = array('name' => 'password', 'placeholder' => 'pass');
+    $name_validated = array('name' => 'name_validated', 'placeholder' => 'Usuario', 'id' => 'name');
+    $password_validated = array('name' => 'password_validated', 'placeholder' => 'pass', 'id' => 'pass');
     ?>
-    <?= form_label('Usuario :', 'name') ?>
-    <?= form_input($name) ?>
-    <?= form_label('Contraseña :', 'password') ?>
-    <?= form_password($password) ?>    
+    <?= form_label('Usuario :', 'name_validated') ?>
+    <?= form_input($name_validated) ?>
+    <?= form_label('Contraseña :', 'password_validated') ?>
+    <?= form_password($password_validated) ?>     
     <br>
     <br>
-    <?= form_submit('', 'Ingresar') ?>
+    <?= form_submit('', 'Entrar', "onclick='notify();'") ?>
     </form>
     <br>
-    <a href="<?= get_registry() ?>" target="_blank">Crear una cuenta ahora!</a> 
+    <div id="enter">
+        <a href="<?= get_registry() ?>" target="_blank">Crear una cuenta ahora!</a> 
+    </div>
 </div>
-
 </body>
 </html>

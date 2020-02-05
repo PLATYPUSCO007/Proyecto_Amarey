@@ -7,7 +7,7 @@
                 <!-- Logo -->
                 <div class="navbar-brand">
                     <a class="logo" href="index.html">
-                        <img src="./img/logo-alt.png" alt="logo">
+                        <img src="<?= base_url()?>img/logo-alt.png" alt="logo">
                     </a>
                 </div>
                 <!-- /Logo -->
@@ -26,7 +26,7 @@
 
 
     <!-- Backgound Image -->
-    <div class="bg-image bg-parallax overlay" style="background-image:url(./img/home-background.jpg)"></div>
+    <div class="bg-image bg-parallax overlay" style="background-image:url(<?= base_url()?>img/home-background.jpg)"></div>
     <!-- /Backgound Image -->
 
 
