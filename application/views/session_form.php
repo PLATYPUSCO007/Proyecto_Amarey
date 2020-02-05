@@ -27,12 +27,14 @@
     <?= form_input($name_validated) ?>
     <?= form_label('Contraseña :', 'password_validated') ?>
     <?= form_password($password_validated) ?>     
+    <br>
+    <br>
     <?= form_submit('', 'Entrar', "onclick='notify();'") ?>
-</form>
-<br>
-<a href="<?= get_registry() ?>" target="_blank">Crear una cuenta ahora!</a> 
-
-</div>
+    </form>
+    <br>
+    <div id="enter">
+        <a href="<?= get_registry() ?>" target="_blank">Crear una cuenta ahora!</a> 
+    </div>
 </div>
 </body>
 </html>
