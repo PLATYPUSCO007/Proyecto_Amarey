@@ -11,16 +11,22 @@ class Main_controller extends CI_Controller {
 
 
 
-    static function print_main(CI_Controller $var) {
-        $var->load->model('main_model');
-        $mainp = $var->main_model->get_mainp();
-        $mainsec = $var->main_model->get_mainsec();
+    public function print_main() {
+        //CARGAR MODELO DEL MAIN
+        $this->load->model('main_model');
+        //OBTENER MENU PRINCIPAL
+        $mainp = $this->main_model->get_mainp();
+        //OBTENER SUBMENUS
+        $mainsec = $this->main_model->get_mainsec();
 
+        //PASAR LOS MENUS A UN ARRAY
         $data['maindata'] = array(
             'main' => $mainp,
             'main2' => $mainsec
         );
-        $page['result'] = $var->load->view('main', $data);
+        
+        //CARGAR VISTA DE MENUS Y PASAR RESULTADOS A LA VISTA
+        $this->load->view('main', $data);
     }
 
 }

@@ -19,7 +19,6 @@ class Welcome extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
-
     function __construct() {
         parent::__construct();
         $this->load->helper('form');
@@ -56,14 +55,16 @@ class Welcome extends CI_Controller {
         /** @var type $results */
         if (empty($data['name_validate']) or empty($data['pass_validate'])) {
             redirect(base_url());
+            die();
         } else {
             $results['usuario'] = $this->form_model->validate($data);
             if ($results['usuario'] != null) {
-                $data['login'] = true;
-                $this->session->set_userdata($data);
-                $results['skeletones'] = $this->load_page_skeleton(); 
-                $this->load->view('user_form', $results);
-                $this->session->sess_destroy();
+                session_start();
+                foreach ($results['usuario']->result() as $user) {
+                    $_SESSION['user'] = $user->nombre;
+                    $_SESSION['login'] = true;
+                }
+                header("Location: " . base_url() . "user");
             } else {
                 header("Location: " . base_url() . "?fallo=true");
                 die();
@@ -71,6 +72,17 @@ class Welcome extends CI_Controller {
         }
     }
 
+    //cargar la vista de usuario
+    function get_user_form() {
+        //cargar la vista y pasar los parametros para iniciar
+        $this->load->view('user_form', $this->load_page_skeleton());
+    }
+
+    function logout() {
+        session_start();
+        session_destroy();
+        header("Location:" . base_url());
+    }
 
     function load_registry() {
         $this->load->view('registry_form', $this->load_page_skeleton());
