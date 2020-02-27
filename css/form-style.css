@@ -166,3 +166,49 @@ and open the template in the editor.
     display: block;
 
 }
+
+main video{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.notify{
+    text-align: center;
+    color: #374050;
+}
+
+.title{
+    text-align: center;
+    color: #374050;
+}
+
+.container-video{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5px;
+    text-align: center;
+    right: auto;
+    left: auto;
+    padding: 10px;
+}
+
+div p{
+    font-weight: bold;
+}
+
+.ind-video1{
+    grid-column: 1/2;
+    grid-row:1;
+}
+
+.ind-video2{
+    grid-column: 2/2;
+    grid-row:1;
+}
+

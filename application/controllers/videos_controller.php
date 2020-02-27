@@ -10,11 +10,6 @@ class Videos_controller extends CI_Controller {
         $this->load->model('videos_model');
     }
 
-    public function load_page_skeleton() {
-        $page['header'] = $this->load->view('header', '', true);
-        $page['body'] = $this->load->view('body', '', true);
-        return $page;
-    }
 
     //Funcion para obtener los videos y cargar la vista
     function print_videos() {
@@ -28,9 +23,8 @@ class Videos_controller extends CI_Controller {
             if (isset($data['videos']['code']) && $data['videos']['code'] == 1066) {
                 //retornar error en consulta
                 echo '<h3>' . $data['videos']['message'] . '</h3>';
+                die();
             } else {
-                //llamamos la funcion skeleton y la almacenamos en el array $data
-                $data['skeleton'] = $this->load_page_skeleton();
                 //cargar vista de videos
                 $this->load->view('videos_form', $data);
             }

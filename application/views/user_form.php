@@ -12,9 +12,9 @@ include base_url() . 'main';
         die();
         ?>
     <?php } else { ?>
-        <a href="<?= base_url().'logout' ?>">Cerrar Sesion</a>
-        <h1><?= $_SESSION['user']; ?></h1>
-
+        <a href="<?= base_url().'logout' ?>"><h4>Cerrar Sesion</h4></a>
+        <h4><?= $_SESSION['user']; ?></h4>
+</div>
         <?php
         if (isset($_GET['category']) && $_GET['category'] != null) {
             include base_url() . 'videos?category=' . $_GET['category'];
@@ -24,7 +24,6 @@ include base_url() . 'main';
         ?>
     <?php } ?>
 
-</div>
 
 </body>
 </html>
